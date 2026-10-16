@@ -49,11 +49,6 @@ Open `admin.html` on the deployed Netlify site to manage the catalogue. Follow `
 - Sample product prices, contact details and illustrations must be replaced before launch.
 
 
-## V16: price range and admin sign-in
-
-### Price filtering
-The Shop sidebar includes presets for Under ₹100, ₹100–₹500, ₹500–₹1,000 and Over ₹1,000, plus a custom dual-slider range and numeric min/max fields. Apply the range to filter the visible catalogue. The filter/dropdown stacking order is intentionally kept low to avoid covering unrelated UI. Product cards also open their details when the user clicks the card background; the heart, cart and text links retain their own actions.
-
 ### Configure the admin password securely on Netlify
 The admin password is **not stored in HTML or JavaScript**. The login is checked by `netlify/functions/admin-auth.mjs`, which uses server-side environment variables and sets a short-lived `HttpOnly; Secure; SameSite=Strict` session cookie.
 
@@ -65,7 +60,7 @@ The admin password is **not stored in HTML or JavaScript**. The login is checked
 
 **Important limitation:** the current admin is still a static catalogue editor. It edits browser-local data and downloads `products.json`; it does not write changes to a live database or commit files to Netlify. The login keeps the password out of public client files and gates the normal admin interface, but a fully tamper-proof live admin requires a server-side database/API that verifies the session on every write. Treat the JSON export + redeploy as the publish workflow for this version.
 
-## V19 updates — slow shop glide, secure admin credentials and custom yarn colours
+##updates — slow shop glide, secure admin credentials and custom yarn colours
 
 - Shop category chips now use the same gentle mobile-only auto-glide speed as the homepage category strip. Touch, pointer, wheel and keyboard interaction pause the glide; reduced-motion settings are respected.
 - Product details include coordinated colour swatches plus a native custom colour picker. The chosen named colour or custom HEX shade is included in WhatsApp enquiries and is saved as the cart variant, then shown in cart and checkout summaries.
