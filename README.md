@@ -1,4 +1,7 @@
-# Parallel Yarns — Studio V6 (handmade crochet storefront)
+# Parallel Yarns (handmade crochet storefront)
+
+
+Live website: https://parallelyarns.netlify.app/
 
 Responsive static storefront built with HTML, CSS and vanilla JavaScript, with a WhatsApp-first checkout. Online payment is intentionally disabled for now. Studio V6 uses a simple left sidebar with no category submenu, a shared top-right wishlist/cart area, horizontally scrollable category filters inside Shop, and a smooth product-to-cart flight animation.
 
